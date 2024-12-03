@@ -1,0 +1,516 @@
+body {
+    background-image: url('../../images/fond-JOE.jpg');
+    margin: auto;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+}
+
+.container {  display: grid;
+    grid-template-columns: 200px 300px 1fr 300px 100px;
+    grid-template-rows: 80px auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto 150px;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+  }
+  
+  .Header { grid-area: 1 / 1 / 2 / 6; }
+  
+  .nav-style {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "style style style style style"
+      "nav-butons nav-butons nav-butons nav-butons nav-butons";
+      top: 0;
+      position: sticky;
+      z-index: 1000;
+    grid-area: 1 / 2 / 2 / 5;
+  }
+  
+  .style { grid-area: style;
+            border-style:solid;
+            border-width: 8px; 
+            height: 0.1px;
+            align-self: flex-end;
+            top: 0;
+            position: sticky;}
+  
+  .nav-butons { grid-area: nav-butons;
+    place-self: center;
+    
+
+                 }
+  
+  .menu {  display: grid;
+    grid-template-columns: 10px 190px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu-color menu-butons"
+      "menu-color menu-butons"
+      "menu-color menu-butons"
+      "menu-color menu-butons"
+      "menu-color menu-butons"
+      "menu-color menu-butons";
+    position: fixed;
+    top: 100px;
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  
+  .menu-butons { grid-area: menu-butons;
+                top: 0;             
+                position: stick;
+                width: 195px;            
+                overflow-x: hidden;
+                padding: 8px 0; }
+  
+  .menu-color { grid-area: menu-color;
+                background-color: black;
+                width: 20px;
+                object-fit: fill;
+                top: 0;
+                 }
+  
+  .tittle { grid-area: 2 / 2 / 3 / 5;
+            place-self: center center; }
+  
+  .actu {  display: grid;
+          grid-template-columns: 300px 0.80fr 300px;
+          grid-template-rows: 1fr 1fr 1fr;
+          gap: 30px 10px;
+          grid-auto-flow: row;
+          grid-template-areas:
+          "text1 text1 img1"
+          "img2 text2 text2"
+          "text3 text3 img3";
+          place-self: center;
+          margin-left: 25px;
+      
+          grid-area: 3 / 2 / 6 / 5;
+  }
+  
+  .text1 { grid-area: text1;
+            text-align: justify;
+          margin-left: 25px;
+        margin-right: 25px; }
+  
+  .text2 { grid-area: text2;
+    text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px; }
+  
+  .text3 { grid-area: text3;
+    text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px; }
+  
+  .img1 { grid-area: img1;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            object-fit: cover;
+            place-self: end; }
+  
+  .img2 { grid-area: img2;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            object-fit: contain;            
+            
+            margin-right: 25px; }
+  
+  .img3 { grid-area: img3;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            object-fit: cover; }
+
+  .actua1 { grid-area: 1 / 1 / 2 / 4;
+    border: 2px;
+    border-style: solid;
+    box-shadow: 10px 10px rgba(128, 128, 128, 0.489);
+    transition: all;
+    height: 294px;    
+    }
+
+  .actua2 { grid-area: 2 / 1 / 3 / 4;
+            border: 2px;
+            border-style: solid;
+            box-shadow: 10px 10px rgba(128, 128, 128, 0.489);
+            height: 294px; }
+
+  .actua3 { grid-area: 3 / 1 / 4 / 4;
+            border: 2px;
+            border-style: solid;
+            box-shadow: 10px 10px rgba(128, 128, 128, 0.489);
+            height: 294px; }
+  
+  .realisations {display: grid;
+                grid-template-columns: 300px 0.80fr 300px;
+                grid-template-rows: 65px 1fr 1fr 1fr;
+                gap: 30px 10px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                ". rea-tittle ."
+                "rea1 rea1 rea-img1"
+                "rea-img2 rea2 rea2"
+                "rea3 rea3 rea-img3";
+                margin-left: 25px; 
+                grid-area: 6 / 2 / 10 / 5;}
+  
+  .rea-tittle { grid-area: rea-tittle;                
+                align-self: center;
+                padding-top: 20px;
+                 }
+  
+  .rea1 { grid-area: rea1;
+          text-align: justify;
+          margin-left: 25px;
+          margin-right: 25px; }
+  
+  .rea-img1 { grid-area: rea-img1;
+              width: 300px;
+              height: 300px;
+              margin-right: 25px;
+              overflow: hidden;
+              object-fit: cover; }
+
+  .real1 { grid-area: 2 / 1 / 3 / 4;
+            border: 2px;
+            border-style: solid;
+            box-shadow: 10px 10px rgba(128, 128, 128, 0.489);}
+  
+  .rea2 { grid-area: rea2;
+          text-align: justify;
+          margin-left: 25px;
+          margin-right: 25px; }
+
+  .rea-img2 { grid-area: rea-img2;
+              width: 300px;
+              height: 300px;
+              overflow: hidden;
+              object-fit: cover;
+              margin-right: 25px; }
+
+  .real2 { grid-area: 3 / 1 / 4 / 4;
+          border: 2px;
+          border-style: solid;
+          box-shadow: 10px 10px rgba(128, 128, 128, 0.489);}
+  
+  .rea3 { grid-area: rea3;
+          text-align: justify;
+          margin-left: 25px;
+          margin-right: 25px; }
+
+  .rea-img3 { grid-area: rea-img3;
+              width: 300px;
+              height: 300px;
+              overflow: hidden;
+              object-fit: cover; }
+
+  .real3 { grid-area: 4 / 1 / 5 / 4;
+          border: 2px;
+          border-style: solid;
+          box-shadow: 10px 10px rgba(128, 128, 128, 0.489);}  
+  
+  .even { display: grid;
+          grid-template-columns: 300px 0.80fr 300px;
+          grid-template-rows: 65px 1fr 1fr 1fr;
+          gap: 30px 10px;
+          grid-auto-flow: row;
+          grid-template-areas:
+          ". even-tittle ."
+          "even1 even1 even-img1"
+          "even-img2 even2 even2"
+          "even3 even3 even-img3";
+          margin-left: 25px;
+          grid-area: 10 / 2 / 14 / 5; }
+  
+  .even-tittle { grid-area: even-tittle;
+                align-self: center;
+                padding-top: 20px;}
+  
+  .even1 { grid-area: even1; }
+  
+  .even-img1 { grid-area: even-img1; }
+
+  .evene1 { grid-area: 2 / 1 / 3 / 4;
+            border: 2px;
+            border-style: solid;
+            box-shadow: 10px 10px rgba(128, 128, 128, 0.489);}
+  
+  .even-img2 { grid-area: even-img2; }
+
+  .even2 { grid-area: even2; }
+
+  .evene2 { grid-area: 3 / 1 / 4 / 4;
+            border: 2px;
+            border-style: solid;
+            box-shadow: 10px 10px rgba(128, 128, 128, 0.489); }
+  
+  .even-img3 { grid-area: even-img3; } 
+  
+  .even3 { grid-area: even3; }
+
+  .evene3 { grid-area: 4 / 1 / 5 / 4;
+            border: 2px;
+            border-style: solid;
+            box-shadow: 10px 10px rgba(128, 128, 128, 0.489); }
+  
+  .Liens { display: grid;
+          grid-template-columns: 300px 300px 300px;
+          grid-template-rows: 65px 150px 150px 150px;
+          gap: 30px 10px;
+          grid-auto-flow: row;
+          grid-template-areas:
+          ". Liens-Tittle ."
+          "fb ig x"
+          "sf wbsite fans"
+          "yt liens1 liens2";
+          margin-left: 103px;
+          place-items: center;
+          position: relative;
+          grid-area: 14 / 2 / 19 / 5; }
+  
+  .Liens-Tittle { grid-area: Liens-Tittle;
+                  align-self:center}
+  
+  .fb { grid-area: fb;
+        place-self: center end;
+        }
+  
+  .ig { grid-area: ig; }
+  
+  .x { grid-area: x;
+       place-self: center start; }
+  
+  .sf { grid-area: sf;
+        place-self: center end;}
+  
+  .wbsite { grid-area: wbsite; }
+
+  .fans { grid-area: fans;
+          place-self: center start; }
+  
+  .yt { grid-area: yt;
+        place-self: center end; }
+  
+  .liens1 { grid-area: liens1; }
+  
+  .liens2 { grid-area: liens2;
+            place-self: center start; }
+  
+  .footer { grid-area: 19 / 1 / 20 / 6; }
+
+.nav-butons nav {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.nav-butons a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-butons a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    font-weight: bold;
+    
+}
+.menu-butons:hover {
+    color: rgb(13, 9, 7);
+}
+
+h1 {
+    font-family: "Copperplate Gothic Light", fantasy; font-size: 75px; font-style: italic; font-weight: bolder; line-height: 49px;
+    text-shadow: 5px 5px 5px gray; }
+
+.rea-tittle h2 {
+  font-size: 42px;
+  place-self: center;
+}
+
+.even-tittle h2 {
+  font-size: 42px;
+  place-self: center;
+}
+
+.Liens-Tittle h2 {
+  font-size: 42px;
+  place-self: center;
+
+}
+
+
+.social-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/* Hover effect */
+.social-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 1);
+}
+
+.icon-title {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background for visibility */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0; /* Hide text initially */
+  transition: opacity 0.3s ease; /* Smooth fade-in */
+  pointer-events: none;}
+
+.icon-container:hover .icon-title {
+    opacity: 1;
+}
+
+.icon-container {
+  position: relative; /* Needed to position the text relative to the icon */
+  display: inline-block;
+}
+
+/* Default styles for mobile devices */
+body {
+  font-size: 16px; /* Base font size for mobile */
+}
+
+
+
+
+
+/* Tablets and small desktops */
+@media (min-width: 768px) {
+  body {
+      font-size: 18px; /* Increase font size for tablets */
+  }
+
+  .container {
+      grid-template-columns: 150px 300px 1fr 300px 150px; /* Adjust layout */
+  }
+}
+
+/* Laptops and large desktops */
+@media (min-width: 1024px) {
+  body {
+      font-size: 20px; /* Larger font size for desktops */
+  }
+
+  .container {
+      grid-template-columns: 200px 300px 1fr 300px 100px; /* Reset layout */
+  }
+}
+
+/* Extra large desktops */
+@media (min-width: 1440px) {
+  body {
+      font-size: 22px; /* Further increase font size for large screens */
+  }
+
+  .container {
+      grid-template-columns: 250px 400px 1fr 400px 150px; /* More spacious layout */
+  }
+
+  /* Additional styles for larger screens */
+  .header, .footer {
+      padding: 20px; /* More padding for larger screens */
+  }
+}
+
+/* Specific adjustments for very small devices */
+@media (max-width: 480px) {
+  .menu-butons {
+      font-size: 18px; /* Smaller buttons on small screens */
+  }
+
+  .text1, .text2, .text3 {
+      margin-left: 10px; /* Reduce margins for small screens */
+      margin-right: 10px; /* Reduce margins for small screens */
+  }
+}
+
+
+.footer {
+  grid-area: 19 / 1 / 20 / 6; /* Adjust the grid area as necessary */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  color: white;
+  padding: 16px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 20px;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #202122fe; /* Button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #131415; /* Darker button color on hover */
+}
+
+.footer a {
+  text-decoration: none; /* Remove underline from links */
+  color: #d1bcbc; /* Change this to your desired link color */
+}
+
+/* Optional: Change the color on hover */
+.footer a:hover {
+  color: #565252; /* Change this to your desired hover color */
+}
